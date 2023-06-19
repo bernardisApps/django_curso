@@ -18,8 +18,8 @@
 
             <tr>
                 <td> {{fav.nombre}} </td>
-                <td> {{fav.url}} </td>
-                <td>borrar</td>
+                <td> <a href="{{fav.url}}">{{fav.url}}</a> </td>
+                <td><a href="{% url 'favoritos:borrar' fav.pk %}">Borrar</a></td>
                 <td>editar</td>
             </tr>
 

@@ -3,11 +3,6 @@ from django.urls import reverse
 from .models import Favorito
 from .forms import FavoritoModelForm
 
-# Create your views here.
-
-def index_favoritos(request):
-    return render(request, 'index.html')
-
 def crear(request):
 
     form = FavoritoModelForm()
@@ -30,5 +25,6 @@ def lista(request):
     
     return render(request, 'lista.html', contexto)
 
-def borrar(request):
-    pass
+def borrar(request, pk):
+    Favorito.objects.get(pk=pk).delete()
+    return lista(request)
