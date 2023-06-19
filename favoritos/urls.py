@@ -7,4 +7,5 @@ urlpatterns = [
     path('crear/', crear, name='crear'),
     path('', lista, name='lista'),
     path('borrar/<int:pk>', borrar , name='borrar'),
+    path('editar/<int:pk>', editar, name='editar')
 ]

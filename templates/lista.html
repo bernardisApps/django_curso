@@ -7,7 +7,7 @@
     <h1>Lista de favoritos</h1>
     <hr>
 
-    <table style="border: 1px solid black; padding: 10px;">
+    <table class="table table-bordered table-hover">
         <tr>
             <td><strong>Nombre</strong></td>
             <td><strong>Url</strong></td>
@@ -19,8 +19,7 @@
             <tr>
                 <td> {{fav.nombre}} </td>
                 <td> <a href="{{fav.url}}">{{fav.url}}</a> </td>
-                <td><a href="{% url 'favoritos:borrar' fav.pk %}">Borrar</a></td>
-                <td>editar</td>
+                <td><a href="{% url 'favoritos:borrar' fav.pk %}">Borrar</a> | <a href="{% url 'favoritos:editar' fav.pk %}">Editar</a></td>
             </tr>
 
         {% endfor %}
